@@ -63,6 +63,14 @@ class TestBooksCollector:
 
         assert collector.get_list_of_favorites_books() == []
 
+    def test_get_books_genre_get_list_books_genre_list_geted(self):
+        collector = BooksCollector()
+        
+        collector.add_new_book('Гордость и предубеждение и зомби')
+        collector.set_book_genre('Гордость и предубеждение и зомби', 'Ужасы')
+        assert collector.get_books_genre() == {'Гордость и предубеждение и зомби': 'Ужасы'}
+
+
 
 @pytest.mark.parametrize('name', ['Я','Он','Дети завтрашнего дня','Дети завтрашнего дняПиксельпутеводитель','Компания с ограниченной ответственностью']) 
 def test_positive_input(name):
