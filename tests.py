@@ -72,10 +72,10 @@ class TestBooksCollector:
 
 
 
-@pytest.mark.parametrize('name', ['Я','Он','Дети завтрашнего дня','Дети завтрашнего дняПиксельпутеводитель','Компания с ограниченной ответственностью']) 
-def test_positive_input(name):
-    collector = BooksCollector()
-    collector.add_new_book(name)
+    @pytest.mark.parametrize('name', ['Я','Он','Дети завтрашнего дня','Дети завтрашнего дняПиксельпутеводитель','Компания с ограниченной ответственностью']) 
+    def test_add_new_book_positive_input_name_with_different_number_characters(self, name):
+        collector = BooksCollector()
+        collector.add_new_book(name)
         
-    assert len(collector.get_books_genre()) == 1
+        assert len(collector.get_books_genre()) == 1
 
