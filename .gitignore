@@ -1,0 +1,5 @@
+.vscode/
+__pycache__/main.cpython-314.pyc
+__pycache__/tests.cpython-314-pytest-9.0.2.pyc
+__pycache__/conftest.cpython-314-pytest-9.0.2.pyc
+conftest.py
